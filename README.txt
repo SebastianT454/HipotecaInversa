@@ -1,9 +1,9 @@
-#Calculadora Hipoteca Inversa
+# Calculadora Hipoteca Inversa
 
 Este proyecto implementa un *simulador de hipoteca inversa* con arquitectura cliente-servidor. Incluye un *backend en Flask (Python), un **frontend en HTML/JS/CSS, y se puede ejecutar fácilmente con **Docker Compose*.
 
 
-##Autores
+## Autores
 
 Proyecto desarrollado como simulador de *hipoteca inversa*, integrando conceptos de finanzas, programación y despliegue con contenedores.
 
