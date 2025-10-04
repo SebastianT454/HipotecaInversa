@@ -7,12 +7,12 @@ Este proyecto implementa un *simulador de hipoteca inversa* con arquitectura cli
 
 Proyecto desarrollado como simulador de *hipoteca inversa*, integrando conceptos de finanzas, programación y despliegue con contenedores.
 
-##Integrantes
+## Integrantes
 -Sebastián Tamayo.
 -Isabella Ceballos.
 -Sofia Correa.
 
-##Tecnologías utilizadas
+## Tecnologías utilizadas
 
 * *Backend*: Python 3, Flask
 * *Frontend*: HTML, CSS, JavaScript
@@ -21,7 +21,7 @@ Proyecto desarrollado como simulador de *hipoteca inversa*, integrando conceptos
 
 
 
-##Estructura del proyecto
+## Estructura del proyecto
 
 
 HipotecaInversa/
