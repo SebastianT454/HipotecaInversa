@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Calculadora de Hipoteca Inversa</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Hipoteca Inversa</h1>
+    <form id="rm-form">
+      <fieldset>
+        <legend>Información del Cliente</legend>
+        <div class="form-grid">
+          <div class="input-group">
+            <label for="age">Edad*</label>
+            <input type="number" id="age" required min="0" max="120" value="65">
+          </div>
+          <div class="input-group">
+            <label for="gender">Género*</label>
+            <select id="gender">
+              <option value="M">Masculino</option>
+              <option value="F">Femenino</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="marital_status">Estado Civil*</label>
+            <select id="marital_status">
+              <option value="Single">Soltero/a</option>
+              <option value="Married">Casado/a</option>
+              <option value="Widowed">Viudo/a</option>
+              <option value="Divorced">Divorciado/a</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="spouse_age">Edad del Cónyuge</label>
+            <input type="number" id="spouse_age" min="0" max="120" value="">
+          </div>
+          <div class="input-group">
+            <label for="spouse_gender">Género del Cónyuge</label>
+            <select id="spouse_gender">
+              <option value="">Ninguno</option>
+              <option value="M">Masculino</option>
+              <option value="F">Femenino</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Información de la Propiedad</legend>
+        <div class="form-grid">
+          <div class="input-group">
+            <label for="property_value">Valor de la Propiedad*</label>
+            <input type="number" id="property_value" required value="10000000">
+          </div>
+          <div class="input-group">
+            <label for="interest_rate">Tasa de Interés (% anual)*</label>
+            <input type="number" id="interest_rate" required step="0.01" value="6.0">
+          </div>
+        </div>
+      </fieldset>
+      
+      <button type="button" id="calculate">Calcular</button>
+    </form>
+
+    <div id="output" class="output"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

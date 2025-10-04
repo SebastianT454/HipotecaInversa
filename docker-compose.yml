@@ -1,0 +1,42 @@
+
+services:
+  db:
+    image: postgres:latest
+    container_name: db_postgres
+    environment:
+      POSTGRES_DB: postgres-db
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+  backend:
+    build: ./backend
+    container_name: hipoteca-backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/usr/src/app
+      - ./frontend:/usr/src/app/frontend
+    working_dir: /usr/src/app
+    environment:
+      - PGHOST=db
+      - PGPORT=5432
+      - PGDATABASE=postgres-db
+      - PGUSER=root
+      - PGPASSWORD=root
+      - PYTHONPATH=/usr/src/app/src
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    container_name: hipoteca-frontend
+    ports:
+      - "8080:80"
+      
+volumes:
+  postgres_data:
